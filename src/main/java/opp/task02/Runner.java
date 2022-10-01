@@ -5,7 +5,7 @@ class Runner {
   public static void main(String[] args) {
     Person p1 = new Person("John", "Brooklyn Av. 12");
     Person s1 = new Student("Suzy", "New York");
-    Person s2 = new Student("Suzy", "New York", "REGULAR",3, 100);
+    Person s2 = new Student("Suzy", "New York", StudiesType.LICENCJAT,1, 10000);
     Person w1 = new Staff("Tom","Boston","Driver", 1000);
     try {
       Person w2 = new Staff("Ann", "Boston", "Driver", -1000);
@@ -22,6 +22,12 @@ class Runner {
     System.out.println(s2);
     System.out.println();
     System.out.println(w1);
+
+    Student s3 = new Student("Jan", "Polkowiece",
+        StudiesType.DOKTORAT, 3, 5_000);
+
+
+
   }
 
 }

@@ -7,20 +7,37 @@ import lombok.Setter;
 @Setter
 class Student extends Person {
 
-  private String type;
+  private StudiesType type;
   private int year;
   private float cost;
 
-  public Student(String name, String address, String type, int year, float cost) {
+  public Student(String name, String address, StudiesType type, int year, float cost) {
     super(name, address);
+
+    studyValidator(year, type, cost);
+
     this.type = type;
     this.year = year;
     this.cost = cost;
   }
 
+  private void studyValidator(int year, StudiesType type, float cost){
+    if (year<=0){
+      throw new IllegalArgumentException("Negative year");
+    }
+    if (type.getDuration() < year) {
+      throw new IllegalArgumentException("Over bound");
+    }
+
+    if (!type.suficiantBudget(cost)) {
+      throw new RuntimeException("To low budget");
+    }
+
+  }
+
   public Student(String name, String address) {
     super(name, address);
-    this.type = "REGULAR";
+    this.type = StudiesType.MAGISTERKA;
     this.year = 1;
     this.cost = 0;
   }
