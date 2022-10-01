@@ -19,6 +19,10 @@ class Person {
 
   @Override
   public String toString() {
-    return getName() + " -> " + getAddress();
+    return new StringBuilder()
+        .append(getName())
+        .append(" -> ")
+        .append(getAddress())
+        .toString();
   }
 }
