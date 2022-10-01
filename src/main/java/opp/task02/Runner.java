@@ -7,6 +7,13 @@ class Runner {
     Person s1 = new Student("Suzy", "New York");
     Person s2 = new Student("Suzy", "New York", "REGULAR",3, 100);
     Person w1 = new Staff("Tom","Boston","Driver", 1000);
+    try {
+      Person w2 = new Staff("Ann", "Boston", "Driver", -1000);
+      System.out.println();
+      System.out.println(w2);
+    } catch (RuntimeException e){
+      System.out.println("Huston, we have problem");
+    }
 
     System.out.println(p1);
     System.out.println();
