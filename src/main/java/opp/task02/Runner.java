@@ -22,10 +22,17 @@ class Runner {
     System.out.println(s2);
     System.out.println();
     System.out.println(w1);
-
+/*
     Student s3 = new Student("Jan", "Polkowiece",
         StudiesType.DOKTORAT, 3, 5_000);
+*/
 
+    Studies pod_1 = new Podyplomowe(2.0f, 6000);
+    if (pod_1.sufficientBudget(7000)) {
+      System.out.println("Is OK");
+    } else {
+      System.out.println("Not enough $");
+    }
 
 
   }
