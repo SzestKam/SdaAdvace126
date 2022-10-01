@@ -1,6 +1,5 @@
 package opp.task02;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 

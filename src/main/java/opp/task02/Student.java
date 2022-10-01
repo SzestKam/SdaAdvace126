@@ -1,5 +1,10 @@
 package opp.task02;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 class Student extends Person {
 
   private String type;
@@ -30,27 +35,4 @@ class Student extends Person {
         cost);
   }
 
-  public String getType() {
-    return type;
-  }
-
-  public void setType(String type) {
-    this.type = type;
-  }
-
-  public int getYear() {
-    return year;
-  }
-
-  public void setYear(int year) {
-    this.year = year;
-  }
-
-  public float getCost() {
-    return cost;
-  }
-
-  public void setCost(float cost) {
-    this.cost = cost;
-  }
 }

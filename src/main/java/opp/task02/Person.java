@@ -1,5 +1,12 @@
 package opp.task02;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
 class Person {
 
   private String name;
@@ -8,27 +15,6 @@ class Person {
   public Person() {
     name = "";
     address = "";
-  }
-
-  public Person(String name, String address) {
-    this.name = name;
-    this.address = address;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public String getAddress() {
-    return address;
-  }
-
-  public void setAddress(String address) {
-    this.address = address;
   }
 
   @Override
