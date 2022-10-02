@@ -3,7 +3,8 @@ package opp.task02;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-class Podyplomowe implements Studies{
+class Podyplomowe implements Studies {
+
   private final float duration;
   private final int totalCost;
 
